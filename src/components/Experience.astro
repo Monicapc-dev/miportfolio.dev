@@ -1,0 +1,24 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE =[
+    {
+        date: 'Marzo 2024 - Mayo 2024',
+        title: 'Desarrollo web - Sozpic',
+        description: 'Creación de dos paginas web en Wordpress usando HTML, CSS, JavaScript, PHP y Tailwind CSS',
+        link: '#',
+    }
+   
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">       
+    {
+        EXPERIENCE.map(experience => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience} />
+        </li>
+        ))
+    }           
+</ol>
+
